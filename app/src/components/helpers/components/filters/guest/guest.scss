@@ -1,0 +1,29 @@
+@import "../../../../../stylesheets/common/main";
+
+:global {
+    .guests.search-box__wrapper {
+        @include lg {
+            width: 100%;
+        }
+    }
+
+    .guests .ahoyclub-guests {
+        cursor: pointer;
+    }
+}
+
+.wrapper {
+    padding: 0 14px;
+
+    p {
+        font-size: 16px;
+    }
+}
+
+.option__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.active {}

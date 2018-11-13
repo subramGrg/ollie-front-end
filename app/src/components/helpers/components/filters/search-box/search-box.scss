@@ -1,0 +1,32 @@
+@import "../../../../../stylesheets/common/main";
+@import "../../../../../stylesheets/common/global";
+
+.wrapper {
+    position: relative;
+
+    input,
+    button {
+        color: $primary-colour;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 10px;
+        padding: 0 46px;
+        line-height: 42px;
+        height: 42px;
+        border: 1px solid $primary-colour;
+        font-size: 14px;
+        outline: none;
+        background: none;
+        width: 100%;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        font-weight: 600;
+        text-align: left;
+
+        &::placeholder {
+            color: $primary-colour;
+        }
+    }
+}
+
+.yacht__name {
+}

@@ -1,0 +1,66 @@
+@import "../../../../stylesheets/common/main";
+
+:global {
+    .date__comp.dates {
+        position: relative;
+        height: 520px;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    transition: .3s max-height;
+}
+
+.show {
+    margin-bottom: 12px;
+}
+
+.close {
+}
+
+.hide {
+}
+
+.hide,
+.clear {
+    display: block;
+    cursor: pointer;
+    color: $primary-colour;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+
+    p {
+        font-size: 18px;
+        text-transform: capitalize;
+    }
+}
+
+.search {
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 14px 10px;
+    font-size: 14px;
+    width: 52%;
+    background: none;
+    border: 1px solid $secondary-colour;
+    border-radius: 6px;
+    outline: none;
+    margin: 60px auto 0;
+    display: block;
+
+    &:hover {
+        background: $secondary-colour;
+        color: #fff;
+    }
+
+    @include sm {
+        margin-top: 20px;
+    }
+}

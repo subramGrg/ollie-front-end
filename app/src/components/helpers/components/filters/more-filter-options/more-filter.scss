@@ -1,0 +1,164 @@
+@import "../../../../../stylesheets/common/main";
+
+:global {
+    .more__filter.active {
+        .ahoyclub-up::before {
+            color: #fff !important;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+
+    @include lg {
+        display: none;
+    }
+}
+
+.menu {
+    width: 100%;
+
+    @include lg {
+        display: none;
+    }
+}
+
+.mobile__filter {
+    text-transform: uppercase;
+    cursor: pointer;
+
+    @include lg {
+        display: none;
+    }
+}
+
+.submit {
+    width: 100px;
+    cursor: pointer;
+    background: none;
+    border: 1px solid $secondary-colour;
+    padding: 14px;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+}
+
+.ranges {
+    margin-top: 40px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    overflow: hidden;
+    font-weight: 600;
+
+    @include lg {
+        display: none;
+        font-weight: normal;
+    }
+}
+
+.extra__filter {
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    &.active {
+        margin: 0;
+    }
+
+    > div {
+        width: 48%;
+    }
+}
+
+.svg {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 12px;
+    margin: auto;
+}
+
+.item {
+    outline: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    color: $primary-colour;
+    font-size: 12px;
+    padding: 0 4px;
+    text-transform: capitalize;
+    background: none;
+    border: 1px solid $primary-colour;
+    border-radius: 6px;
+    cursor: pointer;
+    line-height: 42px;
+    position: relative;
+
+    &.active {
+        background: $secondary-colour;
+        border: 1px solid $secondary-colour;
+        color: #fff;
+    }
+
+    @include md {
+        font-size: 16px;
+    }
+}
+
+.select {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.selectable__wrapper {
+    margin-top: 20px;
+
+    .title {
+        margin: 0;
+        color: $primary-colour;
+        text-transform: capitalize;
+        line-height: 26px;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    button:last-child {
+        margin-right: 0;
+    }
+}
+
+.option__wrapper {
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.price__range {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    button {
+        width: 22%;
+        margin-bottom: 6px;
+        margin-right: 1px;
+
+        @include lg {
+            margin-bottom: 0;
+        }
+    }
+}

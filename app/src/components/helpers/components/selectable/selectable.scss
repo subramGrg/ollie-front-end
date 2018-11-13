@@ -1,0 +1,79 @@
+@import "../../../../stylesheets/common/main";
+
+:global {
+    .filter-mobile__option__wrapper .selectable__option p {
+        @include md {
+            font-size: 14px;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+
+    @include lg {
+        justify-content: space-between;
+    }
+}
+
+.option {
+    font-family: "montserrat", sans-serif;
+    color: $primary-colour;
+    cursor: pointer;
+    border: 2px solid $secondary-colour;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 10px;
+    background: none;
+    box-sizing: border-box;
+    padding: 12px 6px;
+    outline: none;
+    transition: background .4s;
+    margin-right: 10px;
+    width: 33%;
+
+    @include lg {
+        margin-right: 0;
+        padding: 10px 14px;
+    }
+
+    &:hover {
+        @include lg {
+            background: $secondary-colour;
+            color: #fff;
+        }
+    }
+
+    &.active {
+        background: $secondary-colour;
+        color: #fff;
+
+        svg {
+            fill: #fff;
+        }
+
+        .chevron::before {
+            color: #fff !important;
+            display: inline;
+        }
+    }
+
+    &.active p {
+        color: #fff;
+
+        &[data-type="Length"],
+        &[data-type="Weeklyrate"],
+        &[data-type="SalePrice"] {
+            display: inline;
+            margin-left: 10px;
+
+        }
+    }
+
+    &:hover p {
+        @include lg {
+            color: #fff;
+        }
+    }
+}

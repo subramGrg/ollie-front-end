@@ -1,0 +1,34 @@
+@import "../../../../stylesheets/common/main";
+@import "../../../../stylesheets/common/global";
+
+.region-item {
+    display: flex;
+    align-items: center;
+
+    >span {
+        margin-left: 6px;
+    }
+    @include lg {
+        margin: 8px 0;
+    }
+}
+
+.button {
+    @include x-sm {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.label {
+    padding: 6px 0 6px 10px;
+    width: 70%;
+    margin: 0;
+    @include x-sm {
+        padding: 4px 0 4px 10px;
+    }
+    @include lg {
+        padding: 0 0 0 10px;
+        width: 100%;
+    }
+}

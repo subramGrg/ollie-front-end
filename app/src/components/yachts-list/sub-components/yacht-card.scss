@@ -1,0 +1,228 @@
+@import "../../../stylesheets/common/main";
+
+.detail {
+    background: #fff;
+    position: relative;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+    transition: box-shadow .6s linear;
+
+    &:hover {
+        box-shadow: 0 2px 8px 0 rgba(26, 52, 91, 0.6);
+    }
+
+    &.empty {
+        box-shadow: none;
+        background: none;
+    }
+
+    @include lg {
+        width: 32%;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+    }
+}
+
+.name {
+    font-family: "Montserrat", sans-serif;
+    color: $primary-colour;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0 0 12px;
+    font-size: 32px;
+}
+
+.content {
+    margin: 10px 0 0;
+    padding: 6px 14px 16px;
+
+    .price {
+        margin: 0 0 0.6rem;
+    }
+}
+
+.image__wrapper {
+    min-height: 80px;
+
+    @include lg {
+        min-height: 120px;
+    }
+}
+
+.logo {
+    width: 86px;
+    height: auto;
+    margin-right: 6px;
+    border: 0;
+}
+
+.member {
+    position: absolute;
+    right: 14px;
+    bottom: 12px;
+    text-align: right;
+
+    img {
+        width: 30px;
+        height: 100%;
+    }
+}
+
+.price {
+    font-size: 1rem;
+    color: $black10;
+
+    .club {
+        font-weight: 600;
+        font-size: 14px;
+        color: $primary-colour;
+        margin: 2px 0;
+
+        @include lg {
+            display: block;
+        }
+
+        @include lg-2 {
+            display: inline;
+            margin: 0;
+        }
+    }
+
+    .retail {
+        font-size: 12px;
+        display: block;
+        color: $grey50;
+
+        @include lg {
+            display: inline-block;
+        }
+
+        @include lg-2 {
+            margin-left: 8px;
+        }
+    }
+
+    .inc_GST {
+        font-size: 0.7em;
+        display: block;
+    }
+}
+
+.stats {
+    color: $grey10;
+    margin: 18px 0;
+    font-size: 12px;
+    display: flex;
+
+    @include lg {
+        display: block;
+    }
+
+    @include xl {
+        display: flex;
+    }
+}
+
+.stats__info {
+    position: relative;
+    padding-right: 14px;
+    margin: 0 4px 0 0;
+    font-size: 12px;
+
+    @include md {
+        margin: 0 10px 0 0;
+    }
+
+    @include lg {
+        margin: 0 10px 10px 0;
+    }
+
+    @include xl {
+        margin: 0 10px 0 0;
+    }
+
+    > span {
+        padding-left: 20px;
+
+        &.ahoyclub-for-sale {
+            padding-left: 0;
+        }
+
+        &.ahoyclub-yacht {
+            padding-left: 40px;
+        }
+    }
+
+    span {
+        display: block;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            color: $grey50;
+        }
+    }
+}
+
+.value {
+    font-family: "Montserrat", sans-serif;
+}
+
+.yacht_image {
+    max-height: 100%;
+    max-width: 100%;
+    border: 0;
+}
+
+.memberSpecial {
+    position: absolute;
+    color: #fff;
+    right: 0;
+    line-height: 32px;
+    width: 194px;
+    text-transform: capitalize;
+    font-weight: bold;
+    z-index: 1;
+    text-indent: 32px;
+}
+
+.special__svg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    right: 0;
+    fill: #1b345c;
+}
+
+.location {
+    width: 70%;
+
+    ul {
+        list-style-type: none;
+        margin: 16px 0 0;
+        padding: 0;
+    }
+}
+
+.location ul li {
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.all_inclusive {
+    color: $pink;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.for__sale_svg {
+    width: 20px;
+}

@@ -1,0 +1,41 @@
+@import "../../../../../stylesheets/common/main";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 100%;
+    
+    @include lg {
+        top: 10px;
+        bottom: auto;
+    }
+
+    .confirmation {
+        margin-left: 10px;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        width: 62px;
+        height: 28px;
+        text-align: right;
+        cursor: pointer;
+        color: $pink;
+        font-family: "Montserrat", sans-serif;
+        font-size: 14px;
+        justify-content: space-between;
+        font-weight: 600;
+    }
+
+    .share {
+        z-index: 1;
+        top: 0;
+        width: 36px;
+        font-size: 18px;
+        line-height: 42px;
+        left: 0;
+        text-align: right;
+    }
+}
