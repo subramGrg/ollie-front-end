@@ -9,7 +9,7 @@ jobs:
       - run:
           name: Compile React.js
           command: |
-            npm i
+            npm i --quiet
             npm run react:build
       - run:
           name: Create Artifact
