@@ -10,12 +10,11 @@ jobs:
           name: Compile React.js
           command: |
             npm i --quiet
-            npm run react:build
       - run:
           name: Create Artifact
           command: |
             mkdir /tmp/artifacts
-            cp ./app/public
+            cp ./app/.babelrc /tmp/artifacts
       - store_artifacts:
           path: /tmp/artifacts
           destination: build
