@@ -1,5 +1,10 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: postgres:9.4.1
+    steps:
+      - checkout
+      - run:
+          npm run test
+      - store_artifacts:
+          path: /tmp/artifacts
+          destination: build
