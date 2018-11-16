@@ -2,4 +2,4 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ubuntu:14.04
+      - image: postgres:9.4.1
