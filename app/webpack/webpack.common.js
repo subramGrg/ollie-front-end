@@ -7,7 +7,7 @@ const config = {
     entry: path.resolve(__dirname, "../src"),
     context: path.resolve(__dirname, "../src"),
     output: {
-        path: path.resolve(__dirname, "../../Assets/public/react"),
+        path: path.resolve(__dirname, "../public/"),
         filename: "[name]-react.js",
         publicPath: "/",
     },

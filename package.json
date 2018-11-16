@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo 'Error: no test specified'",
-    "react:build": "./node_modules/.bin/webpack --config ./AhoyApp/webpack/webpack.prod.js",
-    "react:server": "./node_modules/.bin/webpack-dev-server --config ./AhoyApp/webpack/webpack.server.js --open",
-    "react:watch": "./node_modules/.bin/webpack --config ./AhoyApp/webpack/webpack.dev.js --watch",
-    "react:analyse": "./node_modules/.bin/webpack --config ./AhoyApp/webpack/webpack.analyse.js"
+    "react:build": "./node_modules/.bin/webpack --config ./app/webpack/webpack.prod.js",
+    "react:server": "./node_modules/.bin/webpack-dev-server --config ./app/webpack/webpack.server.js --open",
+    "react:watch": "./node_modules/.bin/webpack --config ./app/webpack/webpack.dev.js --watch",
+    "react:analyse": "./node_modules/.bin/webpack --config ./app/webpack/webpack.analyse.js"
   },
   "repository": {
     "type": "git",

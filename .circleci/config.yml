@@ -2,11 +2,18 @@ version: 2
 jobs:
   build:
     docker: 
-      - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
+      # the primary container, where your job's commands are run
+      - image: circleci/node:4.8.2 
     steps:
       - checkout
       - run:
-          npm run test
+          name: Compile React.js
+          command: npm run react:build
+      - run:
+          name: Create Artifact
+          command: |
+            mkdir /tmp/artifacts
+            cp ./app/public
       - store_artifacts:
           path: /tmp/artifacts
           destination: build
