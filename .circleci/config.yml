@@ -8,7 +8,9 @@ jobs:
       - checkout
       - run:
           name: Compile React.js
-          command: npm run react:build
+          command: |
+            npm i
+            npm run react:build
       - run:
           name: Create Artifact
           command: |
