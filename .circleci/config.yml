@@ -3,7 +3,7 @@ jobs:
   build:
     docker: 
       # the primary container, where your job's commands are run
-      - image: circleci/node:4.8.2 
+      - image: circleci/node 
     steps:
       - checkout
       - run:
