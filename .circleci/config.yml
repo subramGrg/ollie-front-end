@@ -5,11 +5,6 @@ jobs:
       # the primary container, where your job's commands are run
       - image: circleci/node
     
-    branches:
-      ignore:
-        - develop
-        - master
-
     steps:
       - checkout
       - run:
