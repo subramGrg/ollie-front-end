@@ -1,0 +1,131 @@
+@import "../../../../../stylesheets/common/main";
+
+:global {
+    .yacht-size__wrapper {
+        & .selectable__active,
+        & .selectable__active p {
+            @include lg {
+                background: none !important;
+                color: $primary-colour !important;
+            }
+
+            .yacht-size__large {
+                color: #fff;
+            }
+
+            .yacht-size__icon {
+                color: $primary-colour;
+            }
+        }
+    }
+}
+
+.wrapper {
+    & > div {
+        @include lg {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        @include xl {
+            flex-direction: row;
+        }
+    }
+
+    button {
+        @include lg {
+            padding: 2px 0;
+            margin-bottom: 10px;
+            border: 0;
+            width: 60%;
+
+            &:hover {
+                background: none;
+            }
+        }
+
+        @include xl {
+            margin: 0;
+            width: 30%;
+
+            &:hover {
+                background: none;
+            }
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+
+        &:hover,
+        &:hover p {
+            @include lg {
+                color: $primary-colour;
+            }
+        }
+
+        &:hover {
+            .icon {
+                color: $primary-colour;
+            }
+
+            @include lg {
+                .large {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.selectable__active {
+            color: $primary-colour;
+
+            .icon {
+                color: $grey50;
+            }
+        }
+    }
+
+    .super {
+        font-size: 20px;
+    }
+
+    .motor {
+        font-size: 26px;
+    }
+}
+
+.title {
+    font-size: 10px;
+    margin: 0;
+    color: $grey50;
+    font-weight: normal;
+
+    .desktop {
+        display: none;
+
+        @include lg {
+            display: block;
+        }
+    }
+
+    .mobile {
+        @include lg {
+            display: none;
+        }
+
+        .large {
+            font-size: 20px;
+            color: $primary-colour;
+        }
+    }
+}
+
+.icon {
+    color: $grey50;
+    display: none;
+    margin-bottom: 8px;
+
+    @include lg {
+        display: block;
+    }
+}

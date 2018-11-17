@@ -1,0 +1,40 @@
+@import "../../../../../stylesheets/common/main";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include lg {
+        flex-direction: column;
+    }
+    @include xl {
+        flex-direction: row;
+        margin-top: 14px;
+    }
+
+    p {
+        color: $primary-colour;
+        font-size: 14px;
+        margin: 0;
+    }
+}
+
+.wrapper button {
+    width: 47%;
+
+    @include lg {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    @include xl {
+        margin: 0;
+        width: 47%;
+    }
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.chevron::before {
+    display: none;
+}

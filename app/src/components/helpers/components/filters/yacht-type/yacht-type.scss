@@ -1,0 +1,55 @@
+@import "../../../../../stylesheets/common/main";
+
+.wrapper {
+    svg {
+        fill: $primary-colour;
+        height: 32px;
+        width: 56px;
+        margin-bottom: 4px;
+    }
+
+    button {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: bold;
+        padding: 2px 0;
+        border: 2px solid $secondary-colour;
+        border-radius: 10px;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 12px;
+        color: $primary-colour;
+        width: 33%;
+
+        @include lg {
+            width: 30%;
+        }
+
+        &:hover {
+            svg {
+                fill: #fff;
+            }
+        }
+
+        &[data-type="all"] {
+            font-size: 18px;
+            justify-content: center;
+        }
+    }
+}
+
+.icon {
+    margin-bottom: 4px;
+}
+
+.motor {
+    font-size: 14px;
+    @include iPad {padding-top:15px}
+    @include iPad-L {padding-top:15px}
+}
+
+.sailing {
+    font-size: 36px;
+}

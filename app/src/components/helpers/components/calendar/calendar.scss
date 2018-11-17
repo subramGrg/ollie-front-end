@@ -1,0 +1,312 @@
+@import "../../../../stylesheets/common/main";
+
+:global {
+    .DateRangePicker_picker__portal {
+        background: none;
+        position: static;
+    }
+
+    .DayPicker_portal__horizontal {
+        @include x-sm {
+            top: 54%;
+        }
+
+        height: 450px;
+        top: 40%;
+    }
+
+    .DayPicker_transitionContainer {
+        height: 316px !important;
+    }
+
+    .CalendarMonth_table {
+        margin-top: 58px;
+    }
+
+    .DayPicker *:not(.fa) {
+        font-family: Arial !important;
+    }
+
+    .glyphicon {
+        width: 32px;
+        line-height: 24px;
+        white-space: nowrap;
+        cursor: pointer;
+        background: white;
+        top: 24%;
+        position: absolute;
+    }
+    
+    .glyphicon-chevron-left {
+        left: -20px;
+    }
+
+    .modal__wrapper .glyphicon-chevron-left {
+        left: -45px;
+    }
+    
+    .glyphicon-chevron-right {
+        right: -20px;
+    }
+
+    .CalendarMonth_caption {
+        padding: 0px;
+        line-height: 44px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+
+        strong {
+            color: black;
+        }
+    }
+
+    .DayPickerNavigation {
+        @include md-2 {
+            width: 40%;
+        }
+        position: absolute;
+        justify-content: space-between;
+        display: flex;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        height: 44px;
+        border: 0;
+        border-radius: 6px;
+    }
+
+    .DayPickerNavigation_button {
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+    }
+
+    .DayPickerNavigation_button:first-child {
+        right: 100%;
+        left: auto;
+    }
+
+    .DayPickerNavigation_button__default:focus {
+        outline: none;
+    }
+
+    .DayPickerNavigation_button:nth-child(2) {
+        left: 100%;
+        right: auto;
+    }
+
+    .DayPickerNavigation_button__default {
+        border: 0;
+        background: none;
+
+        &:focus,
+        &:hover {
+            border: 0;
+        }
+    }
+
+    .DayPicker_weekHeader_ul {
+    }
+
+    .DayPicker_weekHeader_li {
+        font-size: 16px;
+        color: #000000;
+        width: 34px !important;
+        font-weight: 700;
+    }
+
+    .CalendarDay__default {
+        font-size: 12px;
+        width: 34px !important;
+        height: 29px !important;
+        border: 0;
+        padding: 0;
+        outline: none;
+        position: relative;
+        z-index: 10;
+    }
+
+    .CalendarDay__blocked_out_of_range,
+    .CalendarDay__blocked_out_of_range:active,
+    .CalendarDay__blocked_out_of_range:hover,
+    .CalendarDay__default {
+        border: 0;
+    }
+
+    .DateInput_input {
+        padding: 0;
+    }
+
+    .CalendarDay__blocked_out_of_range {
+    }
+
+    .CalendarDay__selected,
+    .CalendarDay__selected:active,
+    .CalendarDay__selected:hover,
+    .CalendarDay__hovered_span:hover,
+    .CalendarDay__hovered_span {
+        background: none;
+        color: #fff;
+        border: 0;
+
+        &::after {
+            content: "";
+            border-radius: 0%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: $primary-colour;
+            z-index: -1;
+            color: black;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    
+    .CalendarDay__selected,
+    .CalendarDay__selected:active {
+        color: #fff;
+    }
+
+    .CalendarDay__selected_span {
+        background: $primary-colour;
+        color: #fff;
+        border: 0;
+    }
+
+    .CalendarDay__selected_start::after {
+        background: #357ebd !important;
+        border-radius: 4px 0 0 4px !important;
+    }
+
+    .CalendarDay__selected_end::after {
+        background: #357ebd !important;
+        border-radius: 0 4px 4px 0 !important;
+    }
+
+    .DateRangePicker_picker {
+        top: 100% !important;
+        left: 0;
+        position: absolute;
+        overflow: hidden;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        margin-right: 32px;
+        width: 100%;
+        z-index: 10;
+        
+        @include lg {
+            width: auto !important;
+            top: 0 !important;
+            right: 100%;
+            left: auto !important;
+            z-index: 3;
+        }
+    }
+
+    .DateRangePicker_closeButton {
+        top: 0;
+        right: 0;
+        outline: none;
+        text-transform: capitalize;
+
+        @include lg {
+            display: none;
+        }
+    }
+
+    .DayPicker__withBorder {
+        box-shadow: none;
+        margin: 18px auto 0;
+    }
+
+    .DateInput_fang {
+        display: none;
+    }
+
+    .DayPickerKeyboardShortcuts_buttonReset  {
+        display: none;
+    }
+
+    .DateRangePickerInput {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border-radius: 10px;
+        border: 1px solid #1B345C;
+    }
+
+    .DateInput {
+        background: none;
+        width: 40%;
+
+        input {
+            text-align: center;
+            font-family: "montserrat";
+            font-size: 14px;
+            color: $primary-colour;
+            border-bottom: 0;
+            background-color: transparent;
+            font-weight: 600;
+
+            &::placeholder {
+                color: $primary-colour;
+            }
+        }
+
+        input.DateInput_input__focused {
+            color: $secondary-colour;
+
+            &::placeholder {
+                color: $secondary-colour;
+                opacity: 1;
+            }
+        }
+    }
+
+    .DateRangePicker_applyButton {
+        display: block;
+        margin: 0 auto 20px;
+        border: 2px solid $secondary-colour;
+        background: none;
+        cursor: pointer;
+        padding: 10px 0;
+        width: 200px;
+        outline: none;
+
+        &:hover {
+            background: $secondary-colour;
+            color: #fff;
+        }
+
+        @include lg {
+            width: auto;
+            margin: 0;
+            font-family: "montserrat";
+            position: absolute;
+            bottom: 0;
+            right: 10px;
+            outline: none;
+            padding: 15px;
+            border: 0;
+            background: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}

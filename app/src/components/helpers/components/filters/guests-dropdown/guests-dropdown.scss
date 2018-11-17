@@ -1,0 +1,38 @@
+@import "../../../../../stylesheets/common/main";
+
+:global {
+    .guest__dropdown.search-box__wrapper {
+        width: 48%;
+        display: flex;
+        justify-content: center;
+        height: 42px;
+        align-items: center;
+
+        @include lg {
+            width: 100%;
+        }
+    }
+}
+
+.minus {
+    left: 0;
+}
+
+.add {
+    right: 0;
+}
+
+.guest__font {
+    margin-right: 8px;
+}
+
+.pointer {
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    border: 0;
+    background: none;
+    font-size: 32px;
+    width: 40px;
+    text-align: center;
+}
