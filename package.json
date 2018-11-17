@@ -39,8 +39,10 @@
     "precss": "^3.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sass-loader": "^7.1.0",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.13.1",
+    "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^2.9.7",
     "webpack-merge": "^4.1.4"
   },
