@@ -1,0 +1,21 @@
+@import "../../../../../stylesheets/common/main";
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 16px;
+
+    @include lg {
+        margin: 0;
+    }
+
+    p {
+        font-size: 12px;
+        width: 40%;
+        margin: 0 0 0 10px;
+    }
+
+    button {
+        width: 60%;
+    }
+}

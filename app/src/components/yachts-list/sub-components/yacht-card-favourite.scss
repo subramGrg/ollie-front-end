@@ -1,0 +1,75 @@
+@import "../../../stylesheets/common/mixins";
+
+.hovertext {
+    top: 50%;
+    position: absolute;
+    right: 12px;
+    width: 40px;
+
+    @include lg {
+        top: 90px;
+    }
+
+    img {
+        cursor: pointer;
+        filter: drop-shadow( 0px 0px 5px #777);
+    }
+
+    .tooltiptext {
+        visibility: hidden;
+        width: 180px;
+        bottom: 56px;
+        left: -53%;
+        margin-left: -98px;
+        background-color: #FFFFFF;
+        color: #000000;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        box-shadow: 0px 0px 5px #777;
+        opacity: 0;
+        transition: opacity 1s;
+        z-index: 1;
+
+        &:after {
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 83%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #FFFFFF transparent transparent transparent;
+        }
+    }
+
+    &:hover {
+        right: 12px;
+        width: 50px;
+
+        .tooltiptext {
+            visibility: visible;
+            opacity: 0.9;
+        }
+
+        @include lg {
+            top: 90px;
+        }
+    }
+
+    @include sm {
+        bottom: auto;
+        top: 75px;
+        position: absolute;
+        right: 3.5%;
+        width: 40px;
+
+        &hover {
+            right: 2.5%;
+            width: 50px;
+            bottom: auto;
+            top: 80px;
+        }
+    }
+}

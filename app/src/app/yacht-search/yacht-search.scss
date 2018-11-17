@@ -1,0 +1,167 @@
+@import "../../stylesheets/common/main";
+@import "../../stylesheets/common/global";
+
+.wrapper {
+    padding: 110px 10px 0;
+    position: relative;
+    font-family: "montserrat";
+
+    @include lg {
+        padding: 100px 30px 0;
+    }
+}
+
+.result {
+    display: -moz-box;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    @include lg {
+        flex-direction: row;
+    }
+}
+
+.total {
+    position: relative;
+    color: $primary-colour;
+    margin: 0;
+    font-size: 18px;
+    min-height: 26px;
+
+    @include sm {
+        font-size: 16px;
+    }
+
+    @include lg {
+        font-size: 22px;
+        margin-bottom: 30px;
+    }
+}
+
+.header-wrapper {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include lg {
+        display: block;
+        height: auto;
+        min-height: 0;
+    }
+}
+
+.loader {
+    font-size: 1rem;
+    margin: 0;
+    display: -moz-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+
+    span {
+        margin-bottom: 10px;
+        font-size: 30px;
+        animation-name: blink;
+        animation-duration: 1.4s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+
+        &:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: .4s;
+        }
+    }
+}
+
+.message {
+    font-size: 12px;
+    display: block;
+    font-weight: normal;
+}
+
+@keyframes blink {
+    0% {
+        opacity: .2;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: .2;
+    }
+}
+
+
+
+.total .loader {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    position: absolute;
+    background: $primary-colour;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+
+    &:nth-child(1) {
+        left: 6px;
+        animation: ellipsis1 0.9s infinite;
+    }
+
+    &:nth-child(2) {
+        left: 6px;
+        animation: ellipsis2 0.9s infinite;
+    }
+
+    &:nth-child(3) {
+        left: 26px;
+        animation: ellipsis2 0.9s infinite;
+    }
+
+    &:nth-child(4) {
+        left: 45px;
+        animation: ellipsis3 0.9s infinite;
+    }
+}
+
+@keyframes ellipsis1 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes ellipsis2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(19px, 0);
+    }
+}
+
+@keyframes ellipsis3 {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}

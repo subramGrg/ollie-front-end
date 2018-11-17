@@ -1,0 +1,44 @@
+@import "../../../../../stylesheets/common/main";
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include lg {
+        flex-direction: column;
+    }
+
+    @include lg-2 {
+        flex-direction: row;
+    }
+
+    p {
+        margin: 0;
+        color: $primary-colour;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 4px;
+
+        @include lg {
+            margin-bottom: 8px;
+        }
+
+        @include lg-2 {
+            margin: 0;
+            width: 30%;
+        }
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    p,
+    button {
+        @include sm {
+            font-size: 12px;
+        }
+    }
+}

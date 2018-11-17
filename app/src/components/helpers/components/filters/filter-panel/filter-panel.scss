@@ -1,0 +1,32 @@
+@import "../../../../../stylesheets/common/main";
+
+.section {
+    margin-bottom: 16px;
+}
+
+.reset {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.reset__btn {
+    font-size: 14px;
+    background: none;
+    border: 2px solid $secondary-colour;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50%;
+    outline: none;
+    cursor: pointer;
+    font-weight: 600;
+    color: $primary-colour;
+
+    &:hover {
+        background: $secondary-colour;
+        color: #fff;
+    }
+    @include lg {
+        width: 100%;
+    }
+}

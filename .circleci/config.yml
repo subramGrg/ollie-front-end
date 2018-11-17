@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker: 
+      # the primary container, where your job's commands are run
+      - image: circleci/node
+
+    steps:
+      - checkout
+      - run:
+          name: Compile React.js
+          command: |
+            npm i --quiet
+      - run:
+          name: Create Artifact
+          command: |
+            mkdir /tmp/artifact
+            cp ./app/.babelrc /tmp/artifact
+      - store_artifacts:
+          path: /tmp/artifact
+          destination: build
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build

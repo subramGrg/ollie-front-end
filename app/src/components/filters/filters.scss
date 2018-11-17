@@ -1,0 +1,175 @@
+@import "../../stylesheets/common/main";
+
+:global {
+    .filters__sort {
+        color: $primary-colour;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 800;
+        border-bottom: 2px solid #e2e2e2;
+        margin: 0 0 20px;
+        text-transform: capitalize;
+
+        @include lg {
+            padding-bottom: 6px;
+        }
+    }
+
+    .search-box__wrapper .ahoy__font,
+    .DateRangePicker .ahoy__font {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 36px;
+        font-size: 18px;
+        line-height: 42px;
+        left: 0;
+        text-align: right;
+    }
+
+    .more__filter .ahoy__font {
+        left: auto;
+        right: 0;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .search-box__yacht__name .ahoy__font {
+        font-size: 20px;
+    }
+
+    .guests {
+        &.active .ahoy__font::before {
+            color: #fff !important;
+        }
+
+        .guest__option {
+            outline: none;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            color: $primary-colour;
+            font-size: 14px;
+            padding: 0 46px;
+            text-transform: capitalize;
+            background: none;
+            border: 1px solid $primary-colour;
+            border-radius: 6px;
+            cursor: pointer;
+            line-height: 42px;
+            position: relative;
+            width: 100%;
+            text-align: left;
+            
+            &.active {
+                background: $secondary-colour;
+                border: 1px solid $secondary-colour;
+                color: #fff;
+            }
+        }
+    }
+
+    .price__range .drop-down__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include lg {
+            margin-bottom: 0;
+        }
+
+        button {
+            width: 25%;
+            margin: 12px 0 2px;
+        }
+    }
+}
+
+.wrapper {
+    display: none;
+    padding: 42px 26px;
+    position: relative;
+    @include lg {
+        width: 24%;
+        border: 2px solid #3eb397;
+        border-radius: 10px;
+        align-self: flex-start;
+        display: block;
+    }
+}
+
+.heading {
+    color: $primary-colour;
+    letter-spacing: 3px;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.search {
+    position: relative;
+
+    .icon {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: 72%;
+    }
+}
+
+.search__box {
+    border-radius: 4px;
+    padding: 8px 10px 10px 50px;
+    border: 1px solid #8794a8;
+    font-size: 1rem;
+    outline: none;
+    background: none;
+    line-height: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.name {
+    color: $primary-colour;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 0 0 14px;
+}
+
+.submit__btn {
+    cursor: pointer;
+    background: none;
+    border: 1px solid $secondary-colour;
+    padding: 14px;
+    border-radius: 4px;
+    width: 50%;
+    outline: none;
+    &:hover {
+        background: $secondary-colour;
+        color: #fff;
+    }
+    @include lg {
+        display: none;
+    }
+}
+
+.ranges {
+    width: 80%;
+    margin: 0 auto;
+    @include lg {
+        width: 100%;
+    }
+}
+
+.section {
+    margin-bottom: 16px;
+}
+
+.option__wrapper {
+    margin-bottom: 12px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
