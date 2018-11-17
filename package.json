@@ -24,6 +24,7 @@
     "autoprefixer": "^8.5.0",
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-react-css-modules": "^3.4.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -40,7 +41,6 @@
     "redux-thunk": "^2.3.0",
     "webpack": "^3.10.0",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "2.0.10",
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
